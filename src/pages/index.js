@@ -1,14 +1,23 @@
 import React from "react"
-import { Link } from "gatsby"
-import Header from "../components/header"
+import Layout from "../components/layout"
+import Button from "../components/button_home"
 
 export default function Home() {
   return (
-    <div style={{ color: `purple` }}>
-      <Link to="/contact/">Contact</Link>
-      <Header headerText="Hello Gatsby!" />
-      <p>What a world.</p>
-      <img src="https://source.unsplash.com/random/400x200" alt="" />
-    </div>
+    <Layout>
+      <div className="container">
+          <Button to="api" title="API Studio Ghibli"/>
+          <Button to="/" title="Another thing"/>
+      </div>
+      <p>
+        <strong>Hi! I'm building a fake Gatsby site as part of a tutorial!</strong>
+        What do I like to do? Lots of course but definitely enjoy building
+        websites.
+      </p>
+      <div className="container">
+        <Button to="/" title="Something else"/>
+        <Button to="/" title="Everything"/>
+      </div>
+    </Layout>
   );
 }
