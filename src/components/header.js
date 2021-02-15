@@ -3,21 +3,25 @@ import { Link } from "gatsby"
 
 const ListLink = props => (
   <li style={{ display: `inline-block`, marginRight: `1rem` }}>
-    <Link to={props.to}>{props.children}</Link>
+    <Link style={{ textShadow: `none`, color : props.color }} to={props.to}>{props.children}</Link>
   </li>
 )
 
-export default function Header() {
+export default function Header(props) {
+  if(props.color === "home"){
+    var color = '#fff'
+  }else{
+    var color = '#000'
+  }
   return(
     <header style={{ marginBottom: `1.5rem` }}>
         <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-          <h3 style={{ display: `inline` }}>MyGatsbySite</h3>
+          <h3 style={{ display: `inline`, color : color }}>MyGatsbySite</h3>
         </Link>
         <ul style={{ listStyle: `none`, float: `right` }}>
-          <ListLink to="/">Home</ListLink>
-          <ListLink to="/about/">About</ListLink>
-          <ListLink to="/api/">APi</ListLink>
-          <ListLink to="/contact/">Contact</ListLink>
+          <ListLink color={color} to="/">Home</ListLink>
+          <ListLink color={color} to="/api/">APi</ListLink>
+          <ListLink color={color} to="/about/">About</ListLink>
         </ul>
     </header>
   )

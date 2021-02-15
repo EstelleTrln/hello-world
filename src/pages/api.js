@@ -109,7 +109,7 @@ class FilterableFilmContainer extends Component{
 
     render() {
         return (
-            <div className="container">
+            <div>
                 <SearchBar
                     filterText={this.state.filterText}
                     after2000Only={this.state.after2000Only}
@@ -160,15 +160,10 @@ class App extends Component {
     //     )
     //   })
   
-      return (
-        <div>
-            <Layout>
-                <div style={{ color: `teal` }}>
-                    {/* <Header headerText="Api" /> */}
-                </div>
-            </Layout>
+      return (     
+        <Layout>
             <FilterableFilmContainer films={data}/>
-        </div>
+        </Layout>
         
       )
     }
