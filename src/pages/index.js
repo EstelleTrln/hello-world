@@ -7,7 +7,7 @@ export default function Home() {
     <Layout template="home">
       <div className="text-center">
           <h3 style={{ color: '#fff' }}>
-            <strong>Hi! I'm building a fake Gatsby site as part of a tutorial!</strong>
+            <strong>Hi! I'm building a fake Gatsby site! </strong>
             What do I like to do? Lots of course but definitely enjoy building
             websites.
           </h3>

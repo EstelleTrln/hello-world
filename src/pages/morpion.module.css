@@ -1,0 +1,70 @@
+ol, ul {
+  list-style: none;
+}
+
+.game-info button{
+  width: 1em;
+  height: 1em;
+  border-radius: 100%;
+  border: 3px solid rgb(61, 61, 61);
+  background-color: #fff;
+  margin: 4px;
+}
+
+.game-info .select{
+  background-color: aqua;
+}
+
+.game-board{
+  margin: auto;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: transparent;
+  border: 2px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 3em;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 3em;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game-info {
+  border-radius: 10px;
+  background: linear-gradient(#ff9a9e 0%, #fecfef 100%);
+  padding: 0.5em;
+}
+
+.game-info ul{
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 0;
+  padding: 1em;
+}
+
+.game-info ul li:last-child{
+  margin-bottom: 0;
+}
