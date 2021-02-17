@@ -8,21 +8,22 @@ const ListLink = props => (
 )
 
 export default function Header(props) {
+  var textColor;
   if(props.color === "home"){
-    var color = '#fff'
+    textColor = '#fff'
   }else{
-    var color = '#000'
+    textColor = '#000'
   }
   return(
     <header style={{ marginBottom: `1.5rem` }}>
         <Link to="/" style={{ textShadow: `none`, backgroundImage: `none`, textDecoration: 'none' }}>
-          <h3 style={{ display: `inline`, color : color }}>MyGatsbySite</h3>
+          <h3 style={{ display: `inline`, color : textColor }}>MyGatsbySite</h3>
         </Link>
         <ul style={{ listStyle: `none`, float: `right` }}>
-          <ListLink color={color} to="/">Home</ListLink>
-          <ListLink color={color} to="/api/">APi</ListLink>
-          <ListLink color={color} to="/morpion/">Morpion</ListLink>
-          <ListLink color={color} to="/about/">About</ListLink>
+          <ListLink color={textColor} to="/">Home</ListLink>
+          <ListLink color={textColor} to="/api/">APi</ListLink>
+          <ListLink color={textColor} to="/morpion/">Morpion</ListLink>
+          <ListLink color={textColor} to="/about/">About</ListLink>
         </ul>
     </header>
   )

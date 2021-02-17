@@ -5,12 +5,13 @@ import styles from "./layout.module.css"
 
 
 export default function Layout(props) {
+  var classColor, headerColor;
   if(props.template === "home"){
-    var classColor = styles.bgColors
-    var headerColor = "home"
+    classColor = styles.bgColors
+    headerColor = "home"
     }else{
-    var classColor = ''
-    var headerColor=''
+    classColor = ''
+    headerColor=''
   }
 
   return (
@@ -19,7 +20,7 @@ export default function Layout(props) {
         <div style={{ margin: `auto`, maxWidth: 800, padding: `3rem 1rem` }}>
           <Header color={headerColor} />
         </div>
-        <div className="container content-wrap">
+        <div className="container">
           {props.children}
         </div>
       </section>

@@ -34,7 +34,7 @@ class FilmList extends Component{
         });
     
         return (
-          <div className="container">{rows}</div>
+          <div className="container d-flex flex-wrap">{rows}</div>
         );
       }
 }
